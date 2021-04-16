@@ -10,6 +10,17 @@
 
 <body>
     <h1>Base</h1>
+    <nav>
+        <a href="{% url 'index' %}">home</a>
+        <a href="{% url 'basic_app:relative' %}">relative</a>
+        <a href="{% url 'basic_app:other' %}">other</a>
+        <a href="{% url 'admin:index' %}">admin</a>
+    </nav>
+    <div class="container">
+        {% block body_block %}
+        <!-- anything outside of this will be inherited if you extend -->
+        {% endblock %}
+    </div>
 </body>
 
 </html>
