@@ -4,7 +4,7 @@ from django.shortcuts import render
 
 
 def index(req):
-    context_dict = {'text': 'hello', 'number': 100}
+    context_dict = {'text': 'hello from django', 'number': 100}
     return render(req, 'basic_app/index.html', context_dict)
 
 
